@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">tinyCalculatorApp</string>
+    <string name="firstNumberEditText" />
+    <string name="firstNumberTextFieldHint">1</string>
+    <string name="mathSymbolTextView">+</string>
+    <string name="secondNumberTextField" />
+    <string name="secondNumberTextFieldHint">1</string>
+    <string name="additionSymbolButton">+</string>
+    <string name="subtractionSymbolButton">-</string>
+    <string name="multiplicationSymbolButton">x</string>
+    <string name="divisionSymbolButton">/</string>
+    <string name="resultTextView" />
+    <string name="resultTextViewHint">2</string>
 </resources>
