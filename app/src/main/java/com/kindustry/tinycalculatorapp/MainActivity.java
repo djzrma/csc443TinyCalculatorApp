@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.w3c.dom.Text;
+
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,19 +36,20 @@ public class MainActivity extends AppCompatActivity {
         // declarations used by each button
         EditText firstNumber = findViewById(R.id.firstNumberTextField);
         EditText secondNumber = findViewById(R.id.secondNumberTextField);
+        TextView mathSymbol = findViewById(R.id.mathSymbolTextView);
         TextView result = findViewById(R.id.resultTextView);
-        double firstNumberDouble = Double.parseDouble(firstNumber.getText().toString());
-        double secondNumberDouble = Double.parseDouble(secondNumber.getText().toString());
-        DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
         //onClick action for additionButton
         Button add = findViewById(R.id.additionSymbolButton);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //formating double to 2 decimal places
+                double firstNumberDouble = Double.parseDouble(firstNumber.getText().toString());
+                double secondNumberDouble = Double.parseDouble(secondNumber.getText().toString());
                 double sumDouble = firstNumberDouble + secondNumberDouble;
+                DecimalFormat decimalFormat = new DecimalFormat("0.00");
                 String sum = decimalFormat.format(sumDouble);
+                mathSymbol.setText("+");
                 result.setText(sum);
             }
         });
@@ -56,8 +59,12 @@ public class MainActivity extends AppCompatActivity {
         subtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double firstNumberDouble = Double.parseDouble(firstNumber.getText().toString());
+                double secondNumberDouble = Double.parseDouble(secondNumber.getText().toString());
                 double differenceDouble = firstNumberDouble - secondNumberDouble;
+                DecimalFormat decimalFormat = new DecimalFormat("0.00");
                 String difference = decimalFormat.format(differenceDouble);
+                mathSymbol.setText("-");
                 result.setText(difference);
             }
         });
@@ -67,8 +74,12 @@ public class MainActivity extends AppCompatActivity {
          multiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double firstNumberDouble = Double.parseDouble(firstNumber.getText().toString());
+                double secondNumberDouble = Double.parseDouble(secondNumber.getText().toString());
                 double productDouble = firstNumberDouble * secondNumberDouble;
+                DecimalFormat decimalFormat = new DecimalFormat("0.00");
                 String product = decimalFormat.format(productDouble);
+                mathSymbol.setText("x");
                 result.setText(product);
             }
         });
@@ -78,8 +89,12 @@ public class MainActivity extends AppCompatActivity {
         divide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double firstNumberDouble = Double.parseDouble(firstNumber.getText().toString());
+                double secondNumberDouble = Double.parseDouble(secondNumber.getText().toString());
                 double quotientDouble = firstNumberDouble / secondNumberDouble;
+                DecimalFormat decimalFormat = new DecimalFormat("0.00");
                 String quotient = decimalFormat.format(quotientDouble);
+                mathSymbol.setText("/");
                 result.setText(quotient);
             }
         });

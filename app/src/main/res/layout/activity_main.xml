@@ -24,17 +24,18 @@
 
             <EditText
                 android:id="@+id/firstNumberTextField"
-                android:layout_width="48dp"
+                android:layout_width="64dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="96dp"
                 android:layout_marginTop="24dp"
                 android:layout_weight="1"
                 android:autofillHints=""
                 android:ems="10"
+                android:gravity="center"
                 android:hint="@string/firstNumberTextFieldHint"
                 android:inputType="text"
                 android:minHeight="48dp"
-                app:layout_constraintEnd_toStartOf="@+id/mathSymbolTextView"
+                app:layout_constraintEnd_toStartOf="@+id/secondNumberTextField"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TextFields,DuplicateSpeakableTextCheck" />
@@ -53,13 +54,14 @@
 
             <EditText
                 android:id="@+id/secondNumberTextField"
-                android:layout_width="48dp"
+                android:layout_width="64dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="96dp"
                 android:layout_weight="1"
                 android:autofillHints=""
                 android:ems="10"
+                android:gravity="center"
                 android:hint="@string/secondNumberTextFieldHint"
                 android:inputType="text"
                 android:minHeight="48dp"
@@ -143,12 +145,14 @@
 
             <TextView
                 android:id="@+id/resultTextView"
-                android:layout_width="48dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="206dp"
                 android:layout_marginEnd="197dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="@string/resultTextView"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
