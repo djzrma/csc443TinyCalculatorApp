@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -29,13 +29,15 @@
                 android:layout_marginStart="96dp"
                 android:layout_marginTop="24dp"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/firstNumberTextFieldHint"
                 android:inputType="text"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toStartOf="@+id/mathSymbolTextView"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextFields,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/mathSymbolTextView"
@@ -56,6 +58,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="96dp"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/secondNumberTextFieldHint"
                 android:inputType="text"
@@ -63,7 +66,8 @@
                 android:text="@string/secondNumberTextField"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/mathSymbolTextView"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextFields" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
@@ -89,7 +93,8 @@
                 android:text="@string/additionSymbolButton"
                 app:layout_constraintEnd_toStartOf="@+id/subtractionSymbolButton"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
                 android:id="@+id/subtractionSymbolButton"
@@ -137,8 +142,8 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/resultTextViewHint"
-                android:layout_width="0dp"
+                android:id="@+id/resultTextView"
+                android:layout_width="48dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="206dp"
                 android:layout_marginEnd="197dp"
